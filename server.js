@@ -86,10 +86,10 @@ server.listen(port, ()=>{
 })
 
 async function readData(){
-    const data = await readFile('./data.json', {encoding:"utf8"})
+    const data = await readFile('./data/menu.json', {encoding:"utf8"})
     return JSON.parse(data)
 }
 
 function writeData(data){
-    writeFile('./data.json', JSON.stringify(data, undefined, 4), () =>{})
+    writeFile('./data/menu.json', JSON.stringify(data, undefined, 4), () =>{})
 }
